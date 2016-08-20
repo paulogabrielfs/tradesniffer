@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @suplier.name %>
+</p>
+
+<p>
+  <strong>Federal:</strong>
+  <%= @suplier.federal_id %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @suplier.country %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @suplier.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @suplier.state %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @suplier.address %>
+</p>
+
+<p>
+  <strong>Zip code:</strong>
+  <%= @suplier.zip_code %>
+</p>
+
+<%= link_to 'Edit', edit_suplier_path(@suplier) %> |
+<%= link_to 'Back', supliers_path %>

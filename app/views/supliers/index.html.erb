@@ -1,0 +1,39 @@
+<h1>Listing supliers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Federal</th>
+      <th>Country</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Address</th>
+      <th>Zip code</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @supliers.each do |suplier| %>
+      <tr>
+        <td><%= suplier.name %></td>
+        <td><%= suplier.federal_id %></td>
+        <td><%= suplier.country %></td>
+        <td><%= suplier.city %></td>
+        <td><%= suplier.state %></td>
+        <td><%= suplier.address %></td>
+        <td><%= suplier.zip_code %></td>
+        <td><%= link_to 'Show', suplier %></td>
+        <td><%= link_to 'Edit', edit_suplier_path(suplier) %></td>
+        <td><%= link_to 'Destroy', suplier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Suplier', new_suplier_path %>
